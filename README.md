@@ -28,9 +28,24 @@ Other than that, you can get it done however you see fit. We'll talk soon!
 ### Follow Up
 
 - Explain the flow of data from the store to the UI and back as simply as you can.
+  
+  Redux flow is unidirectional. Components dispatch actions with a certain payload that updates the global state (ie. store) via the reducer. Data is immutable, and the reducer copies a piece of the state (determined by the action) and updates it. Selectors return derived data from the store which are rendered by the component.
 - How else can we improve the experience of the site? What suggestions can you make to the product team and the development team?
+  
+  Define how to load the products on the page (pagination or lazy loading) to optimize performance as the list of products grows
+  Keep accessibility in mind by using HTML5 tags and making sure the html layout is semantic (looks good)
+  Hide cart and have a toggle to open/close for a less cluttered UI and better UX
+  Edit responsive breakpoints and make sure badges and images resize (or disappear) accordingly
+  Add transitions for hovers, clicks, etc. (cosmetic changes)
 - What recommendations can you make to the development team for scalability?
+  
+  Add tests (unit for functionality, snapshots for UI regressions, and e2e for page flow)
+  Typings (flow or TS) to mitigate bugs
+  A system design to separate base components in order to make them reusable (eg. Button, Input).
+  Ejecting from CRA to have more customization options and control over the entire app (ie. webpack config, path aliases)
 - What knowledge up front could have helped this go smoother or faster?
+  
+  The instructions were pretty straight foward. I considered tackling some ambitious UI styling, like refining the responsiveness, but I didn't since I would've taken longer to complete the assignment and it seemed out of it's scope.
 
 ---
 
